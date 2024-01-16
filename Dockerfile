@@ -46,6 +46,9 @@ RUN tar -xzf apache-drill-1.19.0.tar.gz \
  && mv apache-drill-1.19.0 /usr/local/drill \
  && rm apache-drill-1.19.0.tar.gz 
 
+RUN ssh-keygen -t rsa -f $HOME/.ssh/id_rsa -P "" \
+ && cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV ZOOKEEPER_HOME=/usr/local/zookeeper
 ENV HADOOP_HOME=/usr/local/hadoop
@@ -86,9 +89,6 @@ RUN chmod 755 -R $ZOOKEEPER_HOME \
  && chmod 755 -R $SPARK_HOME \
  && chmod 755 -R $HBASE_HOME \
  && chmod 755 -R $DRILL_HOME
-
-RUN ssh-keygen -t rsa -f $HOME/.ssh/id_rsa -P "" \
- && cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
  
 RUN $HADOOP_HOME/bin/hdfs namenode -format
 
