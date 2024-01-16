@@ -87,8 +87,11 @@ RUN chmod 755 -R $ZOOKEEPER_HOME \
  && chmod 755 -R $HBASE_HOME \
  && chmod 755 -R $DRILL_HOME
 
+RUN ssh-keygen -t rsa -f $HOME/.ssh/id_rsa -P "" \
+ && cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+ 
 RUN $HADOOP_HOME/bin/hdfs namenode -format
 
 WORKDIR /home/root
 
-ENTRYPOINT bash
+ENTRYPOINT service ssh start; bash
