@@ -4,5 +4,5 @@ then
         exit 1;
 fi
 
-for file in {run.sh,shell.sh,services.sh,cleanup.sh,conf/myid,conf/server.properties,conf/connect-distributed.properties,myid.sh,server-properties.sh,connect-properties.sh};
+for file in {run.sh,config/zookeeper/myid,myid.sh};
 do sed -i "s/<node_id>/$1/g" $file; done;
