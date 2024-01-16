@@ -4,5 +4,5 @@ then
         exit 1;
 fi
 
-for file in {run.sh,config/zookeeper/myid,myid.sh};
+for file in {run.sh,config/zookeeper/myid};
 do sed -i "s/<node_id>/$1/g" $file; done;
