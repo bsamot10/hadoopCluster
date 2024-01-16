@@ -1,1 +1,1 @@
-docker exec -d <node_name> shell
+docker exec -it <node_name> bash
