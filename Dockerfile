@@ -5,6 +5,7 @@ USER root
 RUN apt-get update
 RUN apt-get dist-upgrade
 RUN apt-get -y install openssh-server
+RUN apt-get -y install zip
 RUN apt-get -y install gzip
 RUN apt-get -y install tar
 RUN apt-get -y install vim
