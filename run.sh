@@ -12,3 +12,4 @@ docker run -d \
 	-p 16010:16010 \
 	-itd bsamot10/spark-hadoop-cluster:latest
 
+. myid.sh
