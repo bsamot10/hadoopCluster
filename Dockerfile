@@ -85,9 +85,9 @@ RUN chmod 755 -R $ZOOKEEPER_HOME \
  && chmod 755 -R $HBASE_HOME \
  && chmod 755 -R $DRILL_HOME
 
-COPY start-services-scripts $HOME
-COPY test-spark-submit $HOME
+COPY bash /home/root/bash
+COPY test-spark-submit /home/root
 RUN hdfs namenode -format
-WORKDIR $HOME
+WORKDIR /home/root
 
 ENTRYPOINT service ssh start; bash
