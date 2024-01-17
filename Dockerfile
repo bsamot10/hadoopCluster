@@ -14,7 +14,7 @@ RUN apt-get -y install jq
 RUN apt-get -y install cron
 RUN apt-get -y install iputils-ping
 RUN apt-get -y install net-tools
-RUN apt-get -y install openjdk-11-jdk
+RUN apt-get -y install openjdk-8-jdk
 RUN apt-get -y install kafkacat
 RUN apt-get -y install scala
 RUN apt-get -y install netcat
@@ -50,7 +50,7 @@ RUN tar -xzf apache-drill-1.19.0.tar.gz \
 RUN ssh-keygen -t rsa -f $HOME/.ssh/id_rsa -P "" \
  && cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ENV ZOOKEEPER_HOME=/usr/local/zookeeper
 ENV HADOOP_HOME=/usr/local/hadoop
 ENV SPARK_HOME=/usr/local/spark
