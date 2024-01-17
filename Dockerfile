@@ -79,19 +79,15 @@ RUN mv /tmp/zookeeper/zoo.cfg $ZOOKEEPER_HOME/conf/zoo.cfg \
  && mv /tmp/hbase/regionservers $HBASE_HOME/conf/regionservers \
  && mv /tmp/drill/drill-override.conf $DRILL_HOME/conf/drill-override.conf
 
-ADD scripts/zookeeper-services.sh $ZOOKEEPER_HOME/
-ADD scripts/spark-services.sh $HADOOP_HOME/
-
-COPY test-spark-submit/ /home/root/
-
 RUN chmod 755 -R $ZOOKEEPER_HOME \
  && chmod 755 -R $HADOOP_HOME \
  && chmod 755 -R $SPARK_HOME \
  && chmod 755 -R $HBASE_HOME \
  && chmod 755 -R $DRILL_HOME
- 
-RUN $HADOOP_HOME/bin/hdfs namenode -format
 
-WORKDIR /home/root
+COPY start-services-scripts $HOME
+COPY test-spark-submit $HOME
+RUN hdfs namenode -format
+WORKDIR $HOME
 
 ENTRYPOINT service ssh start; bash
