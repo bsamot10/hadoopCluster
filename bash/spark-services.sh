@@ -8,7 +8,7 @@ jps -lm
 hdfs dfsadmin -report
 
 hdfs dfs -mkdir -p /apps/spark
-gzip /usr/local/spark/jars/spark-jars.zip /usr/local/spark/jars/*
+zip /usr/local/spark/jars/spark-jars.zip /usr/local/spark/jars/*
 hadoop fs -put /usr/local/spark/jars/spark-jars.zip  /apps/spark
 
 $SPARK_HOME/sbin/start-all.sh
