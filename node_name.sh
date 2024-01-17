@@ -4,5 +4,5 @@ then
         exit 1;
 fi
 
-for file in {run.sh,myid.sh,shell.sh,spark-start-services.sh,jupyter-lab-start.sh,jupyter-lab-stop.sh};
+for file in {run.sh,myid.sh,shell.sh,spark-start-services.sh,zookeeper-start-services.sh,jupyter-lab-start.sh,jupyter-lab-stop.sh};
 do sed -i "s/<node_name>/$1/g" $file; done;
