@@ -2,8 +2,8 @@ FROM ubuntu:22.04
 
 USER root
 
-RUN apt-get update
-RUN apt-get dist-upgrade
+RUN apt-get -y update
+RUN apt-get -y dist-upgrade
 RUN apt-get -y install openssh-server
 RUN apt-get -y install zip
 RUN apt-get -y install gzip
