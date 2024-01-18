@@ -49,7 +49,7 @@ Pull the image from my docker hub (https://hub.docker.com/repositories/bsamot10)
 Run ```. pull.sh``` in every node.
 
 ## Step 6
-Start container in every node.
+Start the containers.
 
 Run ```. run.sh``` in every node.
 
