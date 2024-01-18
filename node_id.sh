@@ -4,7 +4,10 @@ then
         exit 1;
 fi
 
-for file in {run.sh,config/zookeeper/myid,config/hbase-site-worker.xml};
-if ! [ [ $1 == 1 ] && [ $file == 'hbase-site-worker.xml' ] ] ;
-do sed -i "s/<node_id>/$1/g" $file; done;
-fi
+for file in {run.sh,config/zookeeper/myid,config/hbase/hbase-site-worker.xml}; 
+do
+        if ! ([ $1 == 1 ] && [ $file == 'config/hbase/hbase-site-worker.xml' ]);
+        then
+                sed -i "s/<node_id>/$1/g" $file
+        fi
+done
