@@ -58,7 +58,7 @@ Start services in every node.
 
 Run ```. spark-start-services.sh``` in master node, to start _hdfs_ and _spark_ services in evey node.
 
-Run ```. zookeeper-start-services.sh`` in every node, to start _zookeeper_, _drill_ and _hbase_ services in every node.
+Run ```. zookeeper-start-services.sh``` in every node, to start _zookeeper_, _drill_ and _hbase_ services in every node.
 
 ## Step 8
 Enter the containers to verify that the services are running.
