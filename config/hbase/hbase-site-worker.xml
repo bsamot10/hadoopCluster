@@ -40,8 +40,8 @@
     See also https://hbase.apache.org/book.html#standalone_dist
   -->
   <property>
-        <name>hbase.regionserver.hostname</name>
-        <value>worker-<node_id></value>
+    <name>hbase.regionserver.hostname</name>
+    <value>worker-<node_id></value>
   </property>
   <property>
     <name>hbase.cluster.distributed</name>
