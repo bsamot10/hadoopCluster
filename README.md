@@ -37,7 +37,7 @@ Create an overlay nertwork.
 Run ```. overlay.sh``` in the leader node.
 
 ## Step 4
-Assign an id and name in every node. 
+Assign an id and a name in every node. 
 
 Run ```. node_id.sh 1``` in _master_ (_leader_) node, ```. node_id.sh 2``` in _worker-1_ node and ```. node_id.sh 3``` in _worker-2_ node.
 
