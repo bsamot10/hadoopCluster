@@ -15,3 +15,5 @@ docker run -d \
 	-itd bsamot10/spark-hadoop-cluster:latest
 
 . myid.sh
+id=$(cat config/zookeeper/myid)
+if ! [$id == 1] ; then . hbase-site.sh; fi;
