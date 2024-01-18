@@ -4,5 +4,10 @@ then
         exit 1;
 fi
 
-for file in {run.sh,myid.sh,hbase-site.sh,shell.sh,spark-start-services.sh,zookeeper-start-services.sh,jupyter-lab-start.sh};
-do sed -i "s/<node_name>/$1/g" $file; done;
+for file in {run.sh,myid.sh,hbase-site.sh,shell.sh,spark-start-services.sh,zookeeper-start-services.sh,jupyter-lab-start.sh,config/hbase/hbase-site-worker.xml}; 
+do
+        if ! ([ $1 == master ] && [ $file == 'config/hbase/hbase-site-worker.xml' ]);
+        then
+                sed -i "s/<node_name>/$1/g" $file
+        fi
+done
