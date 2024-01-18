@@ -41,7 +41,7 @@
   -->
   <property>
     <name>hbase.regionserver.hostname</name>
-    <value>worker-<node_id></value>
+    <value><node_name></value>
   </property>
   <property>
     <name>hbase.cluster.distributed</name>
