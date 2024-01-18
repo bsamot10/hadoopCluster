@@ -41,7 +41,7 @@ Assign an id and a name in every node.
 
 Run ```. node_id.sh 1``` in _master_ node, ```. node_id.sh 2``` in _worker-1_ node and ```. node_id.sh 3``` in _worker-2_ node.
 
-Run ```. node_name.sh master``` in _master_ (_leader_) node, ```. node_name.sh worker-1``` in _worker-1_ node and ```. node_name.sh worker-2``` in _worker-2_ node.
+Run ```. node_name.sh master``` in _master_ node, ```. node_name.sh worker-1``` in _worker-1_ node and ```. node_name.sh worker-2``` in _worker-2_ node.
 
 ## Step 5
 Pull the image from my docker hub (https://hub.docker.com/repositories/bsamot10).
