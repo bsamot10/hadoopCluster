@@ -32,7 +32,7 @@ If necessary, check the instructions here: https://docs.docker.com/engine/refere
 Load the repository's files and folders in each one of the nodes.
 
 ## Step 3
-Create an overlay nertwork.
+Create an overlay network.
 
 Run ```. overlay.sh``` in the leader node.
 
