@@ -1,4 +1,4 @@
-2# hadoopCluster
+# hadoopCluster
 Docker container for a 3-node hadoop-yarn cluster (not for production).
 
 The present deployment supports 5 services:
