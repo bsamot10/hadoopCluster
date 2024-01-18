@@ -1,4 +1,4 @@
-# hadoopCluster
+2# hadoopCluster
 Docker container for a 3-node hadoop-yarn cluster (not for production).
 
 The present deployment supports 5 services:
@@ -39,7 +39,7 @@ Run ```. overlay.sh``` in the leader node.
 ## Step 4
 Assign an id and a name in every node. 
 
-Run ```. node_id.sh 1``` in _master_ (_leader_) node, ```. node_id.sh 2``` in _worker-1_ node and ```. node_id.sh 3``` in _worker-2_ node.
+Run ```. node_id.sh 1``` in _master_ node, ```. node_id.sh 2``` in _worker-1_ node and ```. node_id.sh 3``` in _worker-2_ node.
 
 Run ```. node_name.sh master``` in _master_ (_leader_) node, ```. node_name.sh worker-1``` in _worker-1_ node and ```. node_name.sh worker-2``` in _worker-2_ node.
 
