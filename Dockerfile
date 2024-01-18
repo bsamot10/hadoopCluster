@@ -78,7 +78,6 @@ RUN mv /tmp/zookeeper/zoo.cfg $ZOOKEEPER_HOME/conf/zoo.cfg \
  && mv /tmp/hbase/hbase-env.sh $HBASE_HOME/conf/hbase-env.sh \
  && mv /tmp/hbase/hbase-site.xml $HBASE_HOME/conf/hbase-site.xml \
  && mv /tmp/hbase/regionservers $HBASE_HOME/conf/regionservers \
- && mv /tmp/hbase/backup-masters $HBASE_HOME/conf/backup-masters \
  && mv /tmp/drill/drill-override.conf $DRILL_HOME/conf/drill-override.conf
 
 RUN chmod 755 -R $ZOOKEEPER_HOME \
