@@ -16,4 +16,4 @@ docker run -d \
 
 . myid.sh
 id=$(cat config/zookeeper/myid)
-if ! [$id == 1] ; then . hbase-site.sh; fi;
+if [ $id != 1 ]; then . hbase-site.sh; fi;
