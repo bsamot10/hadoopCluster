@@ -1,5 +1,5 @@
 # hadoopCluster
-Docker container for a testing 3-node hadoop-yarn cluster.
+Docker container for a 3-node hadoop-yarn cluster (not for production).
 
 The present deployment supports 5 services:
 
@@ -67,6 +67,4 @@ Run ```. shell.sh``` in every node.
 
 Run ```jps``` inside the containers.
 
-If everything has gone well, the ```jps``` command should print all 5 services.
-
-If not, try to restart the missing services in each node.
+If everything has gone well, the ```jps``` command should print all services.
