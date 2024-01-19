@@ -1,24 +1,4 @@
-FROM ubuntu:22.04
-
-USER root
-
-RUN apt-get -y update
-RUN apt-get -y dist-upgrade
-RUN apt-get -y install openssh-server
-RUN apt-get -y install zip
-RUN apt-get -y install gzip
-RUN apt-get -y install tar
-RUN apt-get -y install vim
-RUN apt-get -y install curl
-RUN apt-get -y install jq
-RUN apt-get -y install cron
-RUN apt-get -y install iputils-ping
-RUN apt-get -y install net-tools
-RUN apt-get -y install openjdk-8-jdk
-RUN apt-get -y install kafkacat
-RUN apt-get -y install scala
-RUN apt-get -y install netcat
-RUN apt-get -y install python3-pip
+FROM bsamot10/ubuntu:22.04
 
 RUN pip install jupyterlab
 
@@ -89,7 +69,9 @@ RUN chmod 755 -R $ZOOKEEPER_HOME \
 COPY bash /home/root/bash
 COPY jars /home/root/jars
 COPY test-spark-submit /home/root
+
 RUN hdfs namenode -format
+
 WORKDIR /home/root
 
 ENTRYPOINT service ssh start; bash
