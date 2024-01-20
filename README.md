@@ -22,7 +22,7 @@ Choose one of the nodes to be the leader of the docker swarm.
 
 Enter the leader node and type ```docker swarm init```.
 
-The output of the above command generates the code that you should run in the remaining 2 nodes.
+The output of the above command generates the command that you should run in the remaining 2 nodes.
 
 Copy the code and paste the command in each one of the 2 remaining nodes, so that the nodes join the swarm.
 
