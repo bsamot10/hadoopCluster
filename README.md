@@ -20,7 +20,7 @@ If the nodes do not share the same subnet, install openssh-server in every node 
 ## Step 1
 Choose one of the nodes to be the leader of the docker swarm. 
 
-Enter the leader node and type ```docker swarm init --advertise-addr <LEADER_NODE_IP>```, using the IP of the leader node.
+Enter the leader node and type ```docker swarm init```.
 
 The output of the above command generates the code that you should run in the remaining 2 nodes.
 
