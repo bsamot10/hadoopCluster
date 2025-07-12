@@ -64,7 +64,6 @@ RUN chmod 755 -R $ZOOKEEPER_HOME \
  && chmod 755 -R $DRILL_HOME
 
 COPY bash /home/root/bash
-COPY jars /home/root/jars
 COPY test-spark-submit /home/root
 
 RUN hdfs namenode -format
